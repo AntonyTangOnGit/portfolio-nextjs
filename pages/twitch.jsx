@@ -35,11 +35,7 @@ const twitch = () => {
             few features to note with this project are lazy loading images using
             the Image component, built in routing, and Next/Auth Context.
           </p>
-          <a
-            href="https://twitch-nextjs-tailwind.vercel.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="/" target="_blank" rel="noreferrer">
             <button className="px-8 py-2 mt-4 mr-8">Demo</button>
           </a>
           <a href="" target="_blank" rel="noreferrer">
