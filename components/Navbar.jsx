@@ -70,7 +70,9 @@ const Navbar = () => {
               <Link href="/#projects">Projects</Link>
             </li>
             <li className="ml-10 text-sm uppercase hover:border-b">
-              <Link href="/resume">Resume</Link>
+              <div onClick={() => window.open("assets/jsresume.pdf")}>
+                Resume
+              </div>
             </li>
             <li className="ml-10 text-sm uppercase hover:border-b">
               <Link href="/#contact">Contact</Link>
@@ -140,11 +142,17 @@ const Navbar = () => {
                   Projects
                 </li>
               </Link>
-              <Link href="/resume">
-                <li onClick={() => setNav(false)} className="py-4 text-sm">
-                  Resume
-                </li>
-              </Link>
+
+              <li
+                onClick={() => {
+                  setNav(false);
+                  window.open("../public/assets/jsresume.pdf");
+                }}
+                className="py-4 text-sm"
+              >
+                Resume
+              </li>
+
               <Link href="/#contact">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Contact
@@ -174,14 +182,16 @@ const Navbar = () => {
                     <AiOutlineMail />
                   </div>
                 </Link>
-                <Link href="/resume">
-                  <div
-                    onClick={() => setNav(!nav)}
-                    className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300"
-                  >
-                    <BsFillPersonLinesFill />
-                  </div>
-                </Link>
+
+                <div
+                  onClick={() => {
+                    setNav(!nav);
+                    window.open("../public/assets/jsresume.pdf");
+                  }}
+                  className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300"
+                >
+                  <BsFillPersonLinesFill />
+                </div>
               </div>
             </div>
           </div>
